@@ -22,7 +22,7 @@ class Authenticated implements ObserverInterface
     public function execute(Observer $observer)
     {
         $customer = $observer->getModel();
-        // print_r($customer->getData());exit;
+        
     
         $this->logger->warn('Customer Logged IN:' . $customer->getFirstname());
     }
