@@ -15,8 +15,11 @@ class Main extends \Magento\Framework\View\Element\Template
     protected function _prepareLayout()
     {
     $test = $this->_testFactory->create();
-        $test->setTitle('Test Title');
+        $test->setTitle('Test Title1');
         $test->save();
+        $this->setTestModel($test);
+    // $test = $this->_testFactory->create();
+        $test->loadByTitle('Test Title');
         $this->setTestModel($test);
     }
 }
