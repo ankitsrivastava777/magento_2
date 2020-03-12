@@ -3,4 +3,19 @@
         <preference for="Magento\Customer\Model\Customer" type="Excellence\Hello\Model\Rewrite\Customer\Customer" />
         <preference for="Magento\Customer\Model\ResourceModel\Customer" type="Excellence\Hello\Model\Rewrite\Customer\ResourceModel\Customer\Customer" />
 
+    <virtualType name="Excellence\Hello\Model\Resource\Test\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">excellence_hello_test</argument>
+            <argument name="resourceModel" xsi:type="string">Excellence\Hello\Model\ResourceModel\Test</argument>
+        </arguments>
+    </virtualType>
+ 
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="excellence_hello_grid_data_source" xsi:type="string">Excellence\Hello\Model\Resource\Test\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+ 
     </config>
