@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget class="Excellence\WidgetImage\Block\Widget\Test3" id="excellence_widgetimage_test3">
+		<label>Image display</label>
+		<description>List of products that are set as new</description>
+		<parameters>
+			<parameter name="auto_play" sort_order="10" source_model="Magento\Config\Model\Config\Source\Yesno" visible="true" xsi:type="select">
+				<label>Auto Play</label>
+			</parameter>
+			
+			<parameter name="timeout" sort_order="10" visible="true" xsi:type="text">
+				<label>Autoplay Timeout *</label>
+				<description>in miliseconds</description>
+			</parameter>
+		
+		
+			<parameter name="product_to_display" sort_order="10" visible="true" xsi:type="text">
+				<label>Number of Products To Display *</label>
+			</parameter>
+		</parameters>
+	
+	</widget>
+</widgets>
+
