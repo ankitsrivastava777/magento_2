@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Excellence\Widget\Block\Widget\CustomWidget" id="excellence_widget_customwidget">
+        <label>Custom Ankit Widget</label>
+        <description>This is a sample widget for tutorial purpose.</description>
+        <parameters>
+            <parameter name="param" sort_order="10" visible="true" xsi:type="text">
+                <label>Parameter</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

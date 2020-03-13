@@ -18,5 +18,8 @@ class Main extends \Magento\Framework\View\Element\Template
         $test->setTitle('Test Title');
         $test->save();
         $this->setTestModel($test);
+    
+        $test->loadByTitle('Test Title');
+        $this->setTestModel($test);
     }
 }

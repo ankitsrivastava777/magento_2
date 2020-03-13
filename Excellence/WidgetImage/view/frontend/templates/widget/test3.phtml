@@ -1,0 +1,30 @@
+
+	<h2 class='auto_play'><?php echo $block->getData('auto_play'); ?></h2>
+	<h2 class='product_to_display'><?php echo $block->getData('product_to_display'); ?></h2>
+	<h2 class='timeout'><?php echo $block->getData('timeout'); ?></h2>
+
+	<?php
+$proIds = array(1,2,3);
+
+
+?>
+
+<script type="text/javascript">
+    requirejs(['jquery','owlcarousel'],function($,owl){
+        $('.owl-carousel').owlCarousel({
+        loop:true,
+        items: 1
+});
+    });
+</script>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="http://127.0.0.1/magento/pub/static/frontend/Excellence/first/en_US/images/logo.svg" alt="" srcset="">
+    </div>
+    <div class="item">
+        <img src="http://127.0.0.1/magento/pub/static/frontend/Excellence/first/en_US/images/logo.svg" alt="" srcset="">
+    </div>
+    <div class="item">
+        <img src="http://127.0.0.1/magento/pub/static/frontend/Excellence/first/en_US/images/logo.svg" alt="" srcset="">
+    </div>
+</div>

@@ -6,8 +6,7 @@
         public function loadByEmail($customerEmail)
         {
  
-            echo $customerEmail.'<br/>'; exit;
-            // Do your stuff here
+            
              return parent::loadByEmail($customerEmail);
         }
   

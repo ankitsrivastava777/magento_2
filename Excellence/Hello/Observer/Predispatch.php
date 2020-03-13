@@ -21,8 +21,8 @@ class Predispatch implements ObserverInterface
  
     public function execute(Observer $observer)
     {
-        // $this->logger->warn('Observer Works');
+         $this->logger->warn('Observer Works');
         echo "hello observer";
-       // exit; 
+       
     }
 }

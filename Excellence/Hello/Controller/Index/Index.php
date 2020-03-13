@@ -1,7 +1,7 @@
 <?php
 
 namespace Excellence\Hello\Controller\Index;
-
+use Magento\Framework\Controller\ResultFactory;
 class Index extends \Magento\Framework\App\Action\Action
 {
     public function __construct(
@@ -11,9 +11,18 @@ class Index extends \Magento\Framework\App\Action\Action
         return parent::__construct($context);
     }
     
+    // public function execute()
+    // {
+    //      $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
+    //      $resultRedirect->setUrl($this->_redirect->getRefererUrl());
+    //      return $resultRedirect;
+    // }
+
     public function execute()
     {
-        echo 'Hello World auto call';
-        exit;
-    } 
+         $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
+         // Your code
+         $resultRedirect->setPath('excellence/index/add');
+         return $resultRedirect;
+    }
 }

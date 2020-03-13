@@ -6,7 +6,7 @@
     {
         public function loadByEmail(\Magento\Customer\Model\Customer $customer, $email)
         {
-            // echo 'resource';exit;
+             
             parent::loadByEmail($customer,$email);
         }
   

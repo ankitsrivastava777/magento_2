@@ -1,0 +1,29 @@
+<?php if($block->getData('product_ids')): ?>
+	<h2 class='product_ids'>
+		<?php 
+		$productId = $block->getData('product_ids'); 
+	
+		?>
+		<h1> Product URLs By Id </h1>
+	</h2>
+
+<?php endif; ?>
+<?php
+
+$arr = $block->getProductCollection($productId);	
+
+	foreach ($arr as $pro) {
+?>
+<h2>
+	<a href="<?php echo $pro->getProductUrl(); ?>"> <?php echo $pro->getProductUrl(); ?> </a>
+	</h2>
+		<br>
+	<?php
+	}
+		 	
+// $productsku = $block->ProductColloection($productId);
+// $productsku->getsku();
+
+// print_r($productsku->getsku());
+
+?>
