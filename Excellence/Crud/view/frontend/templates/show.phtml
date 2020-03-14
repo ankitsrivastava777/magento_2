@@ -1,0 +1,36 @@
+<?php
+    $collection = $block->getUserData();
+?>
+<div class="edit_entry">
+    <table class="edit">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Designation</th>
+            <th>Employee_Id</th>
+        </tr>
+        <?php
+            foreach ($collection as $entry) {              
+        ?>
+        <tr>
+            <td>
+                <?php echo $entry->getname(); ?>
+            </td>
+            <td>
+                <?php echo $entry->getage() ; ?>
+            </td>
+            <td>
+                <?php echo $entry->getdesignation(); ?>
+            </td>
+            <td>
+                <?php if (!$entry->getemployee_id() == NULL){
+                echo $entry->getemployee_id();
+            }
+            else{
+                echo "NULL";
+            } ?>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+</div>
